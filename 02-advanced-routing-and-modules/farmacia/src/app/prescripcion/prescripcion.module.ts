@@ -4,10 +4,26 @@ import { PrescripcionComponent } from './components/prescripcion/prescripcion.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DataComponent } from './components/data.component';
+import { PrescripcionListComponent } from './components/prescripcion-list/prescripcion-list.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [PrescripcionComponent, DataComponent],
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  declarations: [PrescripcionComponent, DataComponent, PrescripcionListComponent],
+  imports: [CommonModule, ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forChild(
+      [
+        {
+          path: '',
+          component: PrescripcionListComponent
+        },
+        {
+          path: 'new',
+          component: PrescripcionComponent
+        }
+      ]
+    )
+  ],
   exports: [PrescripcionComponent],
 })
 export class PrescripcionModule {}

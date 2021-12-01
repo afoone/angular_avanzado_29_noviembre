@@ -1,9 +1,11 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 <div>
-<a [routerLink]="'prescripcion'">prescripcion</a>
-<a routerLink="">home</a>
-<a routerLink="login">login</a>
-<a routerLink="data">data</a>
+  <!-- <a [routerLink]="prescripcion_route">prescripcion</a> -->
+  <a routerLink="prescripcion">Listado de prescripciones</a>
+  <a routerLink="prescripcion/new">Nueva prescripcion</a>
+  <a routerLink="">home</a>
+  <!-- <a routerLink="login">login</a> -->
+  <!-- <a routerLink="data">data</a> -->
 </div>
 <div style="border: 1px solid blue">
   <router-outlet name="menu"></router-outlet>
