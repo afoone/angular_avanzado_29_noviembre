@@ -40,7 +40,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
-  providers: [LoginService, LoginGuard, UnsavedChangesGuard],
+  providers: [LoginService, LoginGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

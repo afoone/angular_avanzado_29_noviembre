@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataComponent } from './components/data.component';
 import { PrescripcionListComponent } from './components/prescripcion-list/prescripcion-list.component';
 import { RouterModule } from '@angular/router';
+import { UnsavedChangesGuard } from '../guards/unsaved-changes.guard';
+import { LoginGuard } from '../guards/login.guard';
 
 @NgModule({
   declarations: [PrescripcionComponent, DataComponent, PrescripcionListComponent],
@@ -15,7 +17,9 @@ import { RouterModule } from '@angular/router';
       [
         {
           path: '',
-          component: PrescripcionListComponent
+          component: PrescripcionListComponent,
+          canDeactivate: [UnsavedChangesGuard],
+          canActivate: [LoginGuard]
         },
         {
           path: 'new',
@@ -24,6 +28,7 @@ import { RouterModule } from '@angular/router';
       ]
     )
   ],
+  providers: [UnsavedChangesGuard, LoginGuard ],
   exports: [PrescripcionComponent],
 })
 export class PrescripcionModule {}
