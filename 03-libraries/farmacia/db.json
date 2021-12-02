@@ -1,28 +1,24 @@
 {
   "prescripciones": [
     {
-      "id": 1,
       "paciente": 1,
       "medicamento": "Dextrobuprofeno",
       "dosis": "600mg",
       "pauta": "c8h"
     },
     {
-      "id": 2,
       "paciente": 2,
       "medicamento": "Dextrobuprofeno",
       "dosis": "600mg",
       "pauta": "c6h"
     },
     {
-      "id": 3,
       "paciente": 1,
       "medicamento": "Paracetamol",
       "dosis": "600mg",
       "pauta": "c8h"
     },
     {
-      "id": 4,
       "paciente": 2,
       "medicamento": "Amoxicilina Clavulánico",
       "dosis": "1000mg",

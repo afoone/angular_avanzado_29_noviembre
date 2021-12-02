@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "tabla": {
+      "projectType": "library",
+      "root": "projects/tabla",
+      "sourceRoot": "projects/tabla/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/tabla/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tabla/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tabla/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tabla/src/test.ts",
+            "tsConfig": "projects/tabla/tsconfig.spec.json",
+            "karmaConfig": "projects/tabla/karma.conf.js"
+          }
+        }
+      }
+    },
+    "buttons": {
+      "projectType": "library",
+      "root": "projects/buttons",
+      "sourceRoot": "projects/buttons/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/buttons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/buttons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/buttons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/buttons/src/test.ts",
+            "tsConfig": "projects/buttons/tsconfig.spec.json",
+            "karmaConfig": "projects/buttons/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "tabla"
+}
