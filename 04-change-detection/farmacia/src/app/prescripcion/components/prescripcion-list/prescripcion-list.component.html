@@ -1,2 +1,6 @@
-<imagina-tables [data]="data"></imagina-tables>
+<imagina-tables [data]="data.toArray()"></imagina-tables>
+
+<button (click)="addData()" >add item</button>
+
+<div>Suma: {{suma}} </div>
 

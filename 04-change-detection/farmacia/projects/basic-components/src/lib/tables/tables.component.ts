@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   Input,
   OnChanges,
@@ -10,6 +11,7 @@ import {
   selector: 'imagina-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent implements OnChanges {
   @Input()
@@ -22,6 +24,7 @@ export class TableComponent implements OnChanges {
     this.keys = [];
   }
   ngOnChanges(changes: SimpleChanges): void {
+    console.log("table changed")
     if (changes['data'] && this.data.length > 0) {
       this.keys = Object.keys(this.data[0]);
     }
@@ -37,6 +40,6 @@ export class TableComponent implements OnChanges {
   }
 
   validate(id: number) {
-    console.log("validating "+id)
+    console.log("validating id "+id)
   }
 }
