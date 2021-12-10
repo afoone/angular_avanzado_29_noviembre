@@ -1,0 +1,9 @@
+{
+  "product": {
+      "id":1,
+      "title": "Mandolina",
+      "price": 27,
+      "description": "Mandolina de madera"
+    }
+
+}
