@@ -5,14 +5,17 @@ class Subject {
         this.observers = []
     }
 
+    // subscripción de un nuevo observador
     add(obs){
 	  this.observers = this.observers.concat(obs)
     }
 
+    // unsubscribe de un observador
     delete(obs){
 	  this.observers = this.observers.filter(l => l !== obs)
     }
 
+    // notifico de un nuevo elemento
     notify(msg){
 	  this.observers.forEach(obs => obs.update(msg))
     }
