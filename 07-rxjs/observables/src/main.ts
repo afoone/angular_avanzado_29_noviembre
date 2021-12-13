@@ -1,5 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/04-asyncpipe_services/app.module';
+import { AppModule } from './app/05-subject/app.module';
 
 
 
